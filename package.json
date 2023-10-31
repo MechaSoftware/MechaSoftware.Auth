@@ -6,20 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "move-standalone": "robocopy ./mechasoftware_auth/standalone ../MechaSoftware.Auth.Build/server /E /COPYALL /DCOPY:DAT /MOVE /R:100 /W:3",
+    "move-static": "robocopy ./mechasoftware_auth/static ../MechaSoftware.Auth.Build/cdn/_next/static /E /COPYALL /DCOPY:DAT /MOVE /R:100 /W:3",
+    "move-public": "robocopy ./public ../MechaSoftware.Auth.Build/cdn/public /E /COPYALL /DCOPY:DAT /R:100 /W:3",
+    "move-assets": "robocopy ../MechaSoftware.Auth.Build/cdn/public/assets ../MechaSoftware.Auth.Build/cdn/assets /E /COPYALL /DCOPY:DAT /MOVE /R:100 /W:3"
   },
   "dependencies": {
+    "@theinternetfolks/snowflake": "^1.3.0",
     "@types/node": "20.4.9",
     "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "bcrypt": "^5.1.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
+    "js-cookie": "^3.0.5",
+    "mongoose": "^7.6.3",
     "next": "13.4.13",
+    "nodemailer": "^6.9.7",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "react-toastify": "^9.1.3",
+    "rippleui": "^1.12.1",
+    "sharp": "^0.32.6",
+    "smtpjs": "^0.0.1",
     "tailwindcss": "3.3.3",
+    "ts-md5": "^1.3.1",
+    "ts-postgres": "^1.3.1",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/js-cookie": "^3.0.3",
+    "@types/nodemailer": "^6.4.13",
+    "@types/oracledb": "^6.0.2",
+    "fs": "^0.0.1-security",
+    "oracledb": "^6.2.0",
+    "snowflake-id": "^1.1.0"
   }
 }
